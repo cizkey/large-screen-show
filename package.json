@@ -1,7 +1,7 @@
 {
   "name": "demo-show",
   "version": "1.0.0",
-  "description": "一个简单的gulp学习示例",
+  "description": "使用gulp示例",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
