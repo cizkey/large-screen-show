@@ -76,6 +76,18 @@ var config = {
       dest: "dest/api/"
     }
   },
+  data: {
+    path: {
+      src: "src/data/",
+      dest: "dest/data/"
+    }
+  },
+  lib: {
+    path: {
+      src: "src/lib/",
+      dest: "dest/lib/"
+    }
+  },
   rev: {
     path: {
       css: "rev/css/",
@@ -244,6 +256,20 @@ gulp.task("copyApiJs", function() {
     .pipe(gulp.dest(config.api.path.dest));
 });
 
+// copyData
+gulp.task("copyData", function() {
+  gulp
+    .src(config.data.path.src + "**/**")
+    .pipe(gulp.dest(config.data.path.dest));
+});
+
+// copyLib plugin
+gulp.task("copyLib", function() {
+  gulp
+    .src(config.lib.path.src + "**/**")
+    .pipe(gulp.dest(config.lib.path.dest));
+});
+
 // CSS自动补全前缀并合并为指定文件名压缩到目标文件夹
 gulp.task("concatMinCss", function() {
   var fn = function(node, fullPath) {
@@ -354,5 +380,7 @@ gulp.task("compile", [
   "concatMinCss",
   "concatMinJs",
   "copyImages",
-  "copyApiJs"
+  "copyApiJs",
+  "copyData",
+  "copyLib"
 ]);
