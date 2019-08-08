@@ -1,7 +1,5 @@
 /*!
- * version: v1.0.0; author : Wangpq;
- * Date: 2017-05-09T09:08Z
- * upDate: 2017-05-23T14:00Z
+ * version: v1.0.0;
  */
 var app={
     init : function(){

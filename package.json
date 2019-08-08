@@ -1,5 +1,5 @@
 {
-  "name": "wangpq-gulp-demo",
+  "name": "demo-show",
   "version": "1.0.0",
   "description": "一个简单的gulp学习示例",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "url": "#"
   },
   "keywords": [
-    "wangpq-gulp-demo"
+    "demo, show"
   ],
   "author": "demo",
   "license": "demo",

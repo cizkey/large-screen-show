@@ -1,10 +1,5 @@
 /*!
  * gulpfile for develop v1.0.0
- * author :  Wangpq
- * qq : 451863231
- * Released under the MIT license
- * http://sweetheart.wang/license
- * Date: 2017-05-12T12:00Z
  */
 
 // Load plugins
