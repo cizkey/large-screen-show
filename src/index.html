@@ -1,38 +1,287 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
-  <title>for test</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <script src="./lib/jquery/jquery-1.12.4.js"></script>
-  <script src="./lib/axios/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <title>大屏展示</title>
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/echarts/echarts.min.js"></script>
+    <link href="./css//index.css" rel="stylesheet"></link>
 </head>
-
 <body>
-  <div class="yd-bd">
-    <h4>for test</h4>
-    <p id="res">res</p>
-  </div>
-  <script src="./api/request.js"></script>
-  <script src="./api/service.js"></script>
-  <script>
-    // test 1
-    // $.get( apiUrl + "data/test.json", (res) => {
-    //   $('#res').text(JSON.stringify(res));
-    // });
-
-    // test2 
-    let params = {
-      "from": 1,
-      "size": 12,
-      "endDate": "2019-12-12 00:00:00",
-      "startDate": "2010-12-12 00:00:00"
-    };
-    testService.getTest(params).then((result) => {
-      $('#res').text(JSON.stringify(result));
-    });
-  </script>
+    <!--头部-->
+    <div class="header">
+        <div class="header_left">
+            <div class="left_hours left_text_gradient">09:35:26</div>
+            <div class="left_date left_text_gradient">2019-08-08  星期四</div>
+        </div>
+        <div  class="header_center ">
+            <span class="center_text_gradient">白银市全民健康信息平台</span>
+        </div>
+        <div class="header_right left_text_gradient">
+            <div class="right_org left_text_gradient">白银市卫纪委</div>
+            <div class="right_out left_text_gradient">安全退出</div>
+        </div>
+    </div>
+    <!--内容主体部分-->
+    <div class="content">
+        <!--左边-->
+        <div class="content_left">
+            <div class="frist_div">
+                <div class="content_left_title"><span class="content_title">机构概览</span></div>
+                <div class="org_content">
+                    <div class="org_statistics">
+                        <div class="org_block">
+                            <div class="title">接入医院</div>
+                            <div class="value">24</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">公共卫生机构</div>
+                            <div class="value">185</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">基层卫生机构</div>
+                            <div class="value">185</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">诊所医务室</div>
+                            <div class="value">337</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">总床位数</div>
+                            <div class="value">8179</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">卫生技术人员</div>
+                            <div class="value">9418</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">注册护士</div>
+                            <div class="value">3854</div>
+                        </div>
+                        <div class="org_block">
+                            <div class="title">执业(助理)医师</div>
+                            <div class="value">3603</div>
+                        </div>
+                    </div>
+                    <div class="org_echarts">
+                        <div id="org_echart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="other_div">
+                <div class="content_left_title"><span class="content_title">城市入口</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+            <div class="other_div">
+                <div class="content_left_title"><span class="content_title">医疗运营情况</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+        </div>
+        <!--中间-->
+        <div class="content_center">
+            <div class="center_top">
+                <div>
+                    <div class="clin_count_title">上年度累计门诊人数</div>
+                    <div class="clin_count_item">
+                        <div class="clin_count">1</div>
+                        <div class="clin_count">0</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="clin_count_title">本年度累计门诊人数</div>
+                    <div class="clin_count_item">
+                        <div class="clin_count">1</div>
+                        <div class="clin_count">0</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                        <div class="clin_count">2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="center_bottom">
+                    <div class="center_bottom_btn"><span class="content_title">白银市平台入口 >></span></div>
+                <div class="map_echarts" id="map_echart">
+所属
+                </div>
+            </div>
+        </div>
+        <!--右边-->
+        <div class="content_right">
+            <div class="item_div">
+                <div class="content_right_title"><span class="content_title">医院数据上传趋势</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+            <div class="item_div">
+                <div class="content_right_title"><span class="content_title">人口增长趋势</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+            <div class="item_div">
+                <div class="content_right_title"><span class="content_title">疾病排序</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+            <div class="item_div">
+                <div class="content_right_title"><span class="content_title">近30天机构门诊人次排行</span></div>
+                <div class="org_content">
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    loadOrg();
+    //加载机构概况的图标
+    function loadOrg() {
+        var data = [2,3,4,5,8];
+        var data1 = [3,5,6,2,4];
+        var data2 = [4,2,3,6,5];
+        var data3 = [6,4,3,2,4];
+        var org_echart = echarts.init(document.getElementById('org_echart'));
+        // 指定图表的配置项和数据
+        optionGroup = {
+            tooltip: {
+                trigger: 'axis',
+                // formatter: "name : {b} <br/>grade: {c} "
+            },
+            color: ['#4BC795', '#04BDF6', '#FCAB1C', '#F76041'],
+            legend: {
+                right:0,
+                height:'40px',
+                orient:'vertical',
+                textStyle:{
+                  color:'#fff'
+                },
+                data:['每千人拥有床位','每千人卫生技术人员','每千人执业(助理)医师','每千人注册护士']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '1%',
+                top: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                axisLine:{
+                     lineStyle:{
+                         color:'#03B6F0'
+                     }
+                },
+                axisTick :{
+                    show:false
+                },
+                data: ['市','省','全国']
+            },
+            yAxis: {
+                name : '%',
+                type: 'value',
+                axisLine:{
+                    lineStyle:{
+                        color:'#03B6F0'
+                    }
+                },
+                splitLine: {
+                    lineStyle:{
+                        color:'#054872'
+                    }
+                },
+                axisTick :{
+                    show:false
+                },
+            },
+            series: [{
+                data: data,
+                type: 'bar',
+                smooth: true,
+                barCategoryGap: 25,
+                barWidth:'10%',
+                label: {
+                    normal: {
+                        show: true,
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3,
+                        shadowColor: '#4BC795',
+                        shadowBlur: 10,
+                        // shadowOffsetY: 10
+                    }
+                },
+                name: '每千人拥有床位',
+            },{
+                data: data1,
+                type: 'bar',
+                smooth: true,
+                barCategoryGap: 25,
+                barWidth:'10%',
+                label: {
+                    normal: {
+                        show: true,
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3,
+                        shadowColor: '#04BDF6',
+                        shadowBlur: 10,
+                        // shadowOffsetY: 10
+                    }
+                },
+                name: '每千人卫生技术人员',
+            },{
+                data: data2,
+                type: 'bar',
+                smooth: true,
+                barCategoryGap: 25,
+                barWidth:'10%',
+                label: {
+                    normal: {
+                        show: true,
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3,
+                        shadowColor: '#FCAB1C',
+                        shadowBlur: 10,
+                        // shadowOffsetY: 10
+                    }
+                },
+                name: '每千人执业(助理)医师',
+            },{
+                data: data3,
+                type: 'bar',
+                smooth: true,
+                barCategoryGap: 25,
+                barWidth:'10%',
+                label: {
+                    normal: {
+                        show: true,
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 3,
+                        shadowColor: '#F76041',
+                        shadowBlur: 10,
+                        // shadowOffsetY: 10
+                    }
+                },
+                name: '每千人注册护士',
+            }],
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        org_echart.setOption(optionGroup);
+    }
+</script>
 </body>
-
 </html>

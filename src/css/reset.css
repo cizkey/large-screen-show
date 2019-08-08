@@ -95,8 +95,7 @@ progress {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 article,
 aside,
@@ -109,19 +108,16 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
-}
+  display: block; }
 
 audio,
 canvas,
 video,
 progress {
-  display: inline-block;
-}
+  display: inline-block; }
 
 audio:not([controls]) {
-  display: none;
-}
+  display: none; }
 
 html {
   font-size: 100%;
@@ -134,36 +130,30 @@ html {
   -webkit-tap-highlight-color: transparent;
   /* For some android devices */
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 strong,
 b,
 em {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 i {
-  font-style: italic;
-}
+  font-style: italic; }
 
 pre,
 code {
   font-size: 12px;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 dl,
 ol,
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  table-layout: fixed;
-}
+  table-layout: fixed; }
 
 table,
 thead,
@@ -171,38 +161,32 @@ tbody,
 tfoot,
 tr,
 td {
-  margin: 0;
-}
+  margin: 0; }
 
 th,
 td,
 caption {
   font-weight: normal;
   vertical-align: top;
-  text-align: left;
-}
+  text-align: left; }
 
 a {
   text-decoration: none;
   outline: 0;
-  -webkit-touch-callout: none;
-}
+  -webkit-touch-callout: none; }
 
 a,
 a:visited {
   text-decoration: none;
-  outline: none;
-}
+  outline: none; }
 
 a:hover,
 a:active {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 p {
   font-size: 1em;
-  line-height: 24px;
-}
+  line-height: 24px; }
 
 h1,
 h2,
@@ -211,8 +195,7 @@ h4,
 h5,
 h6 {
   font-size: 1em;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 hr {
   background: black;
@@ -220,8 +203,7 @@ hr {
   color: black;
   display: block;
   height: 1px;
-  width: 100%;
-}
+  width: 100%; }
 
 address,
 caption,
@@ -232,34 +214,28 @@ strong,
 th,
 var {
   font-style: normal;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 img {
   border: none;
   vertical-align: top;
-  -ms-interpolation-mode: bicubic;
-}
+  -ms-interpolation-mode: bicubic; }
 
 a img {
-  display: block;
-}
+  display: block; }
 
 sub,
 sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
 input,
 button,
@@ -271,8 +247,7 @@ select {
   border: 0;
   background: none;
   -webkit-appearance: none;
-  outline: 0;
-}
+  outline: 0; }
 
 /* 移除元素的在focus等状态下的一些默认效果 */
 a,
@@ -288,16 +263,13 @@ textarea,
 textarea:focus,
 [onclick] {
   outline: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-}
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
 /* 清除浮动 */
 .clx:before,
 .clx:after {
   display: table;
-  content: "";
-}
+  content: ""; }
 
 .clx:after {
-  clear: both;
-}
+  clear: both; }

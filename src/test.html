@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>for test</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script src="./lib/jquery/jquery-1.12.4.js"></script>
+  <script src="./lib/axios/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="yd-bd">
+    <h4>for test</h4>
+    <p id="res">res</p>
+  </div>
+  <script src="./api/request.js"></script>
+  <script src="./api/service.js"></script>
+  <script>
+    // test 1
+    // $.get( apiUrl + "data/test.json", (res) => {
+    //   $('#res').text(JSON.stringify(res));
+    // });
+
+    // test2 
+    let params = {
+      "from": 1,
+      "size": 12,
+      "endDate": "2019-12-12 00:00:00",
+      "startDate": "2010-12-12 00:00:00"
+    };
+    testService.getTest(params).then((result) => {
+      $('#res').text(JSON.stringify(result));
+    });
+  </script>
+</body>
+
+</html>
