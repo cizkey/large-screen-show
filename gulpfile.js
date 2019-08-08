@@ -54,8 +54,8 @@ var config = {
   },
   html: {
     path: {
-      src: "src/html/",
-      dest: "dest/html/"
+      src: "src/",
+      dest: "dest/"
     }
   },
   img: {
