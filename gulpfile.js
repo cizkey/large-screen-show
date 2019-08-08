@@ -187,13 +187,13 @@ gulp.task("less", function() {
 });
 
 // sass转css并自动重启本地web服务器
-gulp.task("sass", function() {
-  gulp
-    .src(config.sass.path.src + "**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest(config.sass.path.dest))
-    .pipe(connect.reload());
-});
+// gulp.task("sass", function() {
+//   gulp
+//     .src(config.sass.path.src + "**/*.scss")
+//     .pipe(sass().on("error", sass.logError))
+//     .pipe(gulp.dest(config.sass.path.dest))
+//     .pipe(connect.reload());
+// });
 
 // CSS改变自动重启本地web服务器页面
 gulp.task("style", function() {
@@ -358,7 +358,7 @@ gulp.task("revCssJs", ["revCss", "revJs"]);
 
 // 监测改动的文件并自动重启刷新
 gulp.task("watch", function() {
-  gulp.watch([config.sass.path.src + "**/*.scss"], ["sass"]);
+  // gulp.watch([config.sass.path.src + "**/*.scss"], ["sass"]);
   //gulp.watch([config.less.path.src+'**/*.less'], ['less']);
   gulp.watch([config.css.path.src + "**/*.css"], ["style"]);
   gulp.watch([config.html.path.src + "**/*.html"], ["html"]);
