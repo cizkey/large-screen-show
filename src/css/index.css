@@ -5,7 +5,7 @@ html {
 body {
   color: #fff;
   background: url("../../images/bg.png");
-  height: calc(100% - vm(27));
+  height: calc(100% - 27px);
   margin: 0; }
 
 .header {
@@ -60,7 +60,7 @@ body {
 .content {
   display: flex;
   justify-content: space-between;
-  height: calc(100% - vm(100));
+  height: calc(100% - 100px);
   padding: 0px 0.78125vw 0.78125vw; }
 
 .content_left {
@@ -203,7 +203,8 @@ body {
   padding: 0.52083vw;
   text-align: -webkit-center;
   border: 0.05208vw solid #03B6F0;
-  font-weight: bolder; }
+  font-weight: bolder;
+  cursor: pointer; }
 
 .map_echarts {
   height: calc(100% - 62px);
