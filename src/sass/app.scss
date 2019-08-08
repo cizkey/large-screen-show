@@ -1,0 +1,348 @@
+﻿$vw_base: 750;
+
+@function vm($px) {
+  @return ($px / 750) * 100vw;
+}
+
+html,
+body {
+  font-size: vm(12);
+}
+
+.yd-hd {
+  width: 100%;
+  background-color: #fff;
+  height: vm(120);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  a,
+  a:visited {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    padding-left: vm(12);
+    height: vm(120);
+    line-height: 100%;
+  }
+
+  a:active {
+    color: #4D78E7;
+  }
+
+  a.back {
+    height: vm(120);
+    line-height: vm(120);
+    position: absolute;
+    left: vm(8);
+    top: 0;
+    cursor: pointer;
+  }
+
+  a.back:after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: '';
+    margin-left: vm(8);
+    margin-top: vm(-12);
+    width: vm(24) !important;
+    height: vm(24) !important;
+    display: inline-block;
+    border-color: #ff7452;
+    border-style: solid;
+    border-width: 0px 0px vm(4) vm(4);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  a:active:after {
+    border-color: #4D78E7;
+  }
+
+  a.right {
+    float: right;
+  }
+
+  .hd {
+    width: 100%;
+    position: absolute;
+    left: vm(44);
+    right: vm(34);
+    top: 0;
+    text-align: left;
+    color: #646363;
+    font-size: vm(32);
+    height: vm(120);
+    line-height: vm(120);
+  }
+}
+
+.yd-bd {
+  position: relative;
+  background: #DCAA5A url(../images/bg.png) top center no-repeat;
+  background-size: 100% auto;
+  padding-top: vm(120);
+  padding-bottom: vm(28);
+
+  .images {
+    margin-bottom: vm(28);
+    position: relative;
+    padding-top: vm(28);
+  }
+
+  .clickme {
+    width: vm(80);
+    height: vm(80);
+    background: url(../images/clickme.png) top center no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    top: vm(30);
+    left: vm(30);
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .giftbag {
+    width: 76%;
+    height: vm(180);
+    margin: vm(60) auto 0;
+    background: url(../images/300libao.png) top center no-repeat;
+    background-size: auto 100%;
+    position: relative;
+  }
+}
+
+.car-box {
+  width: vm(300);
+  height: vm(180);
+  margin: vm(300) auto vm(80);
+  margin-left: 52%;
+  position: relative;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+
+  .hand {
+    position: absolute;
+    left: vm(12);
+    width: 30%;
+    height: vm(60);
+    background: url(../images/hand.png) top center no-repeat;
+    background-size: 100% auto;
+    z-index: 10;
+  }
+
+  .car {
+    width: 86%;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../images/car.png) top center no-repeat;
+    background-size: auto 100%;
+    position: relative;
+    z-index: 11;
+    margin-left: 15%;
+  }
+}
+
+
+.btn {
+  width: 50%;
+  height: vm(48);
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &.yh {
+    display: block;
+    height: vm(68);
+    background: url(../images/btn.png) top center no-repeat;
+    background-size: auto 100%;
+    text-indent: -1000px;
+    overflow: hidden;
+  }
+}
+
+.regular {
+  margin: vm(48) vm(28);
+  background-color: #ffe0ad;
+  position: relative;
+  -webkit-border-radius: vm(12);
+  -moz-border-radius: vm(12);
+  border-radius: vm(12);
+
+  .hd {
+    height: vm(60);
+    color: #fff;
+    font-weight: bold;
+    font-size: vm(14);
+    text-align: center;
+    background: url(../images/tips.png) top center no-repeat;
+    background-size: 68% 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: vm(-24);
+    z-index: 11;
+    text-indent: -2000px;
+    overflow: hidden;
+  }
+
+  .bd {
+    padding: vm(48) vm(18) vm(24);
+    position: relative;
+    z-index: 10;
+
+    p {
+      font-size: vm(24);
+      line-height: 2;
+      color: #593f15;
+    }
+  }
+}
+
+
+@-webkit-keyframes tadaWp {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  5%,
+  10% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -2deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -2deg);
+  }
+
+  15%,
+  25%,
+  35%,
+  45% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 2deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 2deg);
+  }
+
+  20%,
+  30%,
+  40% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -2deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -2deg);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tadaWp {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  5%,
+  10% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -2deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -2deg);
+  }
+
+  15%,
+  25%,
+  35%,
+  45% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 2deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 2deg);
+  }
+
+  20%,
+  30%,
+  40% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -2deg);
+    transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -2deg);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tadaWp {
+  -webkit-animation-name: tadaWp;
+  animation-name: tadaWp;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.yh.tadaWp {
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+}
+
+
+
+@-webkit-keyframes handAnimate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  50% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
+@keyframes handAnimate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  50% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
+.handAnimate {
+  -webkit-animation-name: handAnimate;
+  animation-name: handAnimate;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
