@@ -1,5 +1,4 @@
-$(function () {
-
+$(function() {
   let dataX = [
     "2001",
     "2002",
@@ -76,6 +75,11 @@ $(function () {
           lineStyle: {
             color: "#03B6F0"
           }
+        },
+        splitLine: {
+          lineStyle: {
+            color: "#054872"
+          }
         }
       },
       {
@@ -87,6 +91,11 @@ $(function () {
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: "#054872"
           }
         }
       }
@@ -111,8 +120,9 @@ $(function () {
       {
         name: "可支配收入",
         type: "line",
+        symbol: "circle",
         symbolSize: 10,
-        data: data3
+        data: data3,
       }
     ]
   };
