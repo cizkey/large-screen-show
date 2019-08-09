@@ -108,6 +108,7 @@ $(function test() {
       {
         name: "可支配收入",
         type: "line",
+        symbolSize: 10,
         data: data3
       }
     ]

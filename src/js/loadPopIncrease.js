@@ -13,7 +13,7 @@ $(function loadOrg() {
     color: ["#E549DB", "#22D41E", "#FCAB1C", "#F76041"],
     legend: {
       right: 0,
-    //   height: "40px",
+      // height: "40px",
       orient: "horizontal",
       textStyle: {
         color: "#fff"
@@ -72,6 +72,7 @@ $(function loadOrg() {
         smooth: true,
         barCategoryGap: 25,
         barWidth: "10%",
+        symbol: "circle",
         label: {
           normal: {
             show: true
@@ -93,6 +94,7 @@ $(function loadOrg() {
         smooth: true,
         barCategoryGap: 25,
         barWidth: "10%",
+        symbol: "circle",
         label: {
           normal: {
             show: true
@@ -114,6 +116,7 @@ $(function loadOrg() {
         smooth: true,
         barCategoryGap: 25,
         barWidth: "10%",
+        symbol: "circle",
         label: {
           normal: {
             show: true
@@ -135,6 +138,7 @@ $(function loadOrg() {
         smooth: true,
         barCategoryGap: 25,
         barWidth: "10%",
+        symbol: "circle",
         label: {
           normal: {
             show: true
