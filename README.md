@@ -5,6 +5,14 @@
 
 当修改了sass里面的代码后，gulp会自动监听修改内容并同名保存到css文件夹中（如果没有css文件夹，将自动创建一个）
 
+## 快速启动
+```bash
+npm install 
+```
+```bash
+npm run start
+```
+
 ## 运行并使用
 
 **首先确保安装了node环境**
