@@ -77,4 +77,4 @@ $(function test() {
 
   var myChart = echarts.init(document.getElementById("runChart"));
   myChart.setOption(option);
-})();
+});

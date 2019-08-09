@@ -1,4 +1,4 @@
-$(function test() {
+$(function () {
   let data1 = ['白银市第一', '甘肃中心', '会宁县人民', '白银市中学', '白银市第一', '白银市第一',  '白银市第一'];
   let data2 = [504, 340, 736, 61, 328, 49, 920, 407];
 
@@ -71,4 +71,4 @@ $(function test() {
 
   var myChart = echarts.init(document.getElementById("patientTrend"));
   myChart.setOption(option);
-})();
+});

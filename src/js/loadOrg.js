@@ -1,5 +1,5 @@
 // 加载机构概况的图标
-$(function loadOrg() {
+$(function () {
   var data = [2, 3, 4, 5, 8];
   var data1 = [3, 5, 6, 2, 4];
   var data2 = [4, 2, 3, 6, 5];
@@ -141,4 +141,4 @@ $(function loadOrg() {
   };
   // 使用刚指定的配置项和数据显示图表。
   org_echart.setOption(optionGroup);
-})();
+});

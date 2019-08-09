@@ -1,4 +1,4 @@
-$(function loadOrg() {
+$(function () {
   let dataX = [2015, 2016, 2017, 2018, 2019];
   let data = [2, 3, 4, 5, 8];
   let data1 = [3, 5, 6, 2, 4];
@@ -159,4 +159,4 @@ $(function loadOrg() {
 
   let org_echart = echarts.init(document.getElementById("popIncrease"));
   org_echart.setOption(optionGroup);
-})();
+});
