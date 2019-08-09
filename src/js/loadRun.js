@@ -1,5 +1,4 @@
 $(function test() {
-
   let data1 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
   let data2 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
 
@@ -13,15 +12,15 @@ $(function test() {
         }
       }
     },
-    color: ['#4BC795', '#04BDF6', '#FCAB1C', '#F76041'],
+    color: ["#4BC795", "#04BDF6", "#FCAB1C", "#F76041"],
     legend: {
       data: ["均次门诊费用", "平均住院费用"]
     },
     grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '1%',
-      top: '1%',
+      left: "3%",
+      right: "4%",
+      bottom: "1%",
+      top: "1%",
       containLabel: true
     },
     dataZoom: {
@@ -33,12 +32,12 @@ $(function test() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1
-      },
-      {
-        type: "category",
-        boundaryGap: true,
-        data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        data: data1,
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        }
       }
     ],
     yAxis: [
@@ -47,7 +46,18 @@ $(function test() {
         scale: true,
         name: "总价:元",
         min: 0,
-        boundaryGap: [0.2, 0.2]
+        boundaryGap: [0.2, 0.2],
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            type: "dashed"
+          }
+        }
       }
     ],
     series: [
@@ -64,6 +74,6 @@ $(function test() {
     ]
   };
 
-  var myChart = echarts.init(document.getElementById("popluation2"));
+  var myChart = echarts.init(document.getElementById("runChart"));
   myChart.setOption(option);
 })();

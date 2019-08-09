@@ -32,27 +32,28 @@ $(function test() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1
-      },
-      {
-        type: "category",
-        boundaryGap: true,
-        data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-      }
-    ],
-    yAxis: {
-      type: "value",
-      scale: true,
-      name: "总价:元",
-      min: 0,
-      boundaryGap: [0.2, 0.2],
-      splitLine: {
-        show: true,
-        lineStyle: {
-          type: "dashed"
+        data: data1,
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
         }
       }
-    },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        scale: true,
+        name: "总价:元",
+        min: 0,
+        boundaryGap: [0.2, 0.2],
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        }
+      }
+    ],
     series: [
       {
         name: "均次门诊费用",
@@ -67,6 +68,6 @@ $(function test() {
     ]
   };
 
-  var myChart = echarts.init(document.getElementById("popluation2"));
+  var myChart = echarts.init(document.getElementById("patientTrend"));
   myChart.setOption(option);
 })();

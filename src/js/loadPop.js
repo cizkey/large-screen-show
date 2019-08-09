@@ -1,5 +1,4 @@
 $(function test() {
-
   let data1 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
   let data2 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
   let data3 = [10.2, 10.6, 12.3, 7.2, 12.3, 10.3, 14.7, 10.5, 10.1, 6.3];
@@ -19,10 +18,10 @@ $(function test() {
       data: ["城乡人口", "城镇人口", "可支配收入"]
     },
     grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '1%',
-      top: '1%',
+      left: "3%",
+      right: "4%",
+      bottom: "1%",
+      top: "1%",
       containLabel: true
     },
     dataZoom: {
@@ -34,21 +33,31 @@ $(function test() {
       {
         type: "category",
         boundaryGap: true,
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        },
         data: [
-          "9:04:32 AM",
-          "9:04:34 AM",
-          "9:04:36 AM",
-          "9:04:38 AM",
-          "9:04:40 AM",
-          "9:04:42 AM",
-          "9:04:44 AM",
-          "9:04:46 AM",
-          "9:04:48 AM",
-          "9:04:50 AM"
+          "2001",
+          "2002",
+          "2003",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010"
         ]
       },
       {
         type: "category",
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        },
         boundaryGap: true,
         data: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       }
@@ -59,14 +68,24 @@ $(function test() {
         scale: true,
         name: "人口:万人",
         min: 0,
-        boundaryGap: [0.2, 0.2]
+        boundaryGap: [0.2, 0.2],
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        }
       },
       {
         type: "value",
         scale: true,
         name: "收入:万元",
         min: 0,
-        boundaryGap: [0.2, 0.2]
+        boundaryGap: [0.2, 0.2],
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        }
       }
     ],
     series: [
