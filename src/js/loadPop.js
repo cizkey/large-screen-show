@@ -1,4 +1,4 @@
-$(function test() {
+$(function () {
   let data1 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
   let data2 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
   let data3 = [10.2, 10.6, 12.3, 7.2, 12.3, 10.3, 14.7, 10.5, 10.1, 6.3];
@@ -116,4 +116,4 @@ $(function test() {
 
   var myChart = echarts.init(document.getElementById("popluation"));
   myChart.setOption(option);
-})();
+});
