@@ -4,22 +4,21 @@ $(function() {
     tooltip: {
       formatter: "{a} <br/>{c} {b}"
     },
-    toolbox: {
-      show: true,
-      feature: {
-        mark: { show: true },
-        restore: { show: true },
-        saveAsImage: { show: true }
-      }
+    grid: {
+      left: "1%",
+      right: "1%",
+      bottom: "1%",
+      top: "1%",
+      containLabel: true
     },
     series: [
       {
         name: "数据上传总量",
         type: "gauge",
-        min: 0,
-        max: 220,
-        splitNumber: 11,
-        radius: "80%",
+        // min: 0,
+        // max: 220,
+        // splitNumber: 11,
+        radius: "100%",
         axisLine: {
           // 坐标轴线
           lineStyle: {
@@ -35,7 +34,7 @@ $(function() {
           textStyle: {
             // 属性lineStyle控制线条样式
             fontWeight: "bolder",
-            color: "#fff",
+            // color: "",
             shadowColor: "#fff", //默认透明
             shadowBlur: 10
           }
@@ -46,7 +45,7 @@ $(function() {
           lineStyle: {
             // 属性lineStyle控制线条样式
             color: "auto",
-            shadowColor: "#fff", //默认透明
+            shadowColor: "#fff",
             shadowBlur: 10
           }
         },
@@ -83,10 +82,11 @@ $(function() {
           borderColor: "#fff",
           shadowColor: "#fff", //默认透明
           shadowBlur: 5,
-          offsetCenter: [0, "90%"], // x, y，单位px
+          offsetCenter: [0, "85%"], // x, y，单位px
           textStyle: {
             // 其余属性默认使用全局文本样式，详见TEXTSTYLE
             fontWeight: "bolder",
+            // fontSize: "24",
             color: "#06BAFF"
           }
         },
