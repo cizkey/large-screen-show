@@ -155,7 +155,15 @@
             </div>
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">疾病排序</span></div>
-                <div class="org_content">
+                <div class="org_content displye_flex">
+                    <div style="width: 50%;height: 100%;">
+                        <span>疾病感染数量排序:</span>
+                        <div class="chart_dev" id="disease1"></div>
+                    </div>
+                    <div style="width: 50%;height: 100%;">
+                        <span>死因和经济负担排序:</span>
+                        <div class="chart_dev" id="disease2"></div>
+                    </div>
                 </div>
             </div>
             <div class="item_div">
@@ -184,6 +192,8 @@
     <script src="./js/loadPopIncrease.js"> </script>
     <!-- 医院数据上传 chart load -->
     <script src="./js/loadDataUpload.js"> </script>
+    <!-- 疾病排序 chart load -->
+    <script src="./js/loadDisease.js"> </script>
 </body>
 
 </html>
