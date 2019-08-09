@@ -1,6 +1,7 @@
 $(function test() {
   let data1 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
-  let data2 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
+  let datay1 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
+  let datay2 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
 
   let option = {
     tooltip: {
@@ -64,12 +65,12 @@ $(function test() {
       {
         name: "均次门诊费用",
         type: "bar",
-        data: data1
+        data: datay1
       },
       {
         name: "平均住院费用",
         type: "bar",
-        data: data2
+        data: datay2
       }
     ]
   };

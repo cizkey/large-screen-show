@@ -1,6 +1,6 @@
 $(function test() {
-  let data1 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
-  let data2 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
+  let data1 = ['白银市第一', '甘肃中心', '会宁县人民', '白银市中学', '白银市第一', '白银市第一',  '白银市第一'];
+  let data2 = [504, 340, 736, 61, 328, 49, 920, 407];
 
   let option = {
     tooltip: {
@@ -12,10 +12,10 @@ $(function test() {
         }
       }
     },
-    color: ["#4BC795", "#04BDF6", "#FCAB1C", "#F76041"],
-    legend: {
-      data: ["均次门诊费用", "平均住院费用"]
-    },
+    color: ["#04BDF6"],
+    // legend: {
+    //   data: ["就诊人次"]
+    // },
     grid: {
       left: "3%",
       right: "4%",
@@ -30,18 +30,6 @@ $(function test() {
     },
     xAxis: [
       {
-        type: "category",
-        boundaryGap: true,
-        data: data1,
-        axisLine: {
-          lineStyle: {
-            color: "#03B6F0"
-          }
-        }
-      }
-    ],
-    yAxis: [
-      {
         type: "value",
         scale: true,
         name: "总价:元",
@@ -54,14 +42,21 @@ $(function test() {
         }
       }
     ],
+    yAxis: [
+      {
+        type: "category",
+        boundaryGap: true,
+        data: data1,
+        axisLine: {
+          lineStyle: {
+            color: "#03B6F0"
+          }
+        }
+      }
+    ],
     series: [
       {
-        name: "均次门诊费用",
-        type: "bar",
-        data: data1
-      },
-      {
-        name: "平均住院费用",
+        name: "就诊人次",
         type: "bar",
         data: data2
       }
