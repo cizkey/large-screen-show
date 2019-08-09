@@ -101,8 +101,8 @@ $(function() {
 
 
 $(function() {
-  let data1 = ["0501", "0502", "0503", "0504", "0505", "0506", "0507"];
-  let data2 = [504, 340, 736, 61, 328, 49, 920, 407];
+  let dataX = ["0501", "0502", "0503", "0504", "0505", "0506", "0507"];
+  let dataY = [504, 340, 736, 61, 328, 49, 920, 407];
 
   let option2 = {
     tooltip: {
@@ -134,7 +134,7 @@ $(function() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1,
+        data: dataX,
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
@@ -168,7 +168,7 @@ $(function() {
         type: "line",
         // symbol: "circle",
         symbolSize: 10,
-        data: data2
+        data: dataY
       }
     ]
   };

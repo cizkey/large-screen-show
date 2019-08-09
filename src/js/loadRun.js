@@ -1,5 +1,5 @@
 $(function test() {
-  let data1 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
+  let dataX1 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
   let datay1 = [504, 340, 736, 61, 328, 49, 920, 407, 312, 399];
   let datay2 = [2016, 2017, 2018, 2019, 2010, 2011, 2012, 2013, 2014, 2015];
 
@@ -33,7 +33,7 @@ $(function test() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1,
+        data: dataX1,
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
