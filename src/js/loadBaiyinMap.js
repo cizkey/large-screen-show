@@ -111,11 +111,11 @@ $(function() {
               emphasis: { label: { show: true } }
             },
             data: [
-              { name: "平川区", value: 20057.34 },
-              { name: "白银区", value: 15477.48 },
+              { name: "平川区", value: 8057.34 },
+              { name: "白银区", value: 25477.48 },
               { name: "会宁县", value: 31686.1 },
-              { name: "景泰县", value: 6992.6 },
-              { name: "靖远县", value: 29045.49 }
+              { name: "景泰县", value: 3992.6 },
+              { name: "靖远县", value: 1045.49 }
             ],
             // 自定义名称映射
             nameMap: {

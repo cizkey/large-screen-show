@@ -12,6 +12,8 @@ npm install
 ```bash
 npm run start
 ```
+### 效果
+![ebXhgH.png](https://s2.ax1x.com/2019/08/09/ebXhgH.png)
 
 ## 运行并使用
 
