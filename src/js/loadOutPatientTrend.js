@@ -58,7 +58,13 @@ $(function test() {
       {
         name: "就诊人次",
         type: "bar",
-        data: data2
+        data: data2,
+        label: {
+          normal: {
+            show: true,
+            position: "right"
+          }
+        }
       }
     ]
   };
