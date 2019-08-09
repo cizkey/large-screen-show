@@ -22,7 +22,7 @@ $(function test() {
       left: '3%',
       right: '4%',
       bottom: '1%',
-      top: '3%',
+      top: '1%',
       containLabel: true
     },
     dataZoom: {

@@ -201,3 +201,22 @@ body {
   width: 100%;
   padding: 10px 40px;
 }
+.chart_dev {
+  height: 100%;
+}
+.displye_flex {
+  display: flex;
+}
+.label_div {
+  margin: 5px 0px;
+  padding: 0px 20px;
+}
+.label_span1 {
+  font-size: 22px; color:#FFAF10
+}
+.label_span2 {
+  font-size: 22px; color:#43C595
+}
+.label_span3 {
+  font-size: 22px; color:#04B9F2
+}
