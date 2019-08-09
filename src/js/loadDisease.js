@@ -1,6 +1,6 @@
 $(function() {
-  let data1 = ["感冒", "糖尿病", "高血压", "鼻炎", "上呼吸道感染"];
-  let data2 = [504, 340, 736, 61, 328];
+  let dataY = ["感冒", "糖尿病", "高血压", "鼻炎", "上呼吸道感染"];
+  let dataX = [504, 340, 736, 61, 328];
 
   let option1 = {
     tooltip: {
@@ -46,7 +46,7 @@ $(function() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1,
+        data: dataY,
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
@@ -58,14 +58,14 @@ $(function() {
       {
         name: "疾病感染数量",
         type: "bar",
-        data: data2,
+        data: dataX,
         label: {
           normal: {
             show: true,
             position: "right"
           }
         },
-        
+
         // itemStyle: {
         //   normal: {
         //     color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
@@ -83,8 +83,8 @@ $(function() {
 });
 
 $(function() {
-  let data1 = ["鼻炎", "糖尿病", "皮肤病", "上呼吸道感染", "感冒"];
-  let data2 = [0.41, 0.2, 0.3, 0.4, 0.5];
+  let dataY = ["鼻炎", "糖尿病", "皮肤病", "上呼吸道感染", "感冒"];
+  let dataX = [0.41, 0.2, 0.3, 0.4, 0.5];
 
   let option2 = {
     tooltip: {
@@ -130,7 +130,7 @@ $(function() {
       {
         type: "category",
         boundaryGap: true,
-        data: data1,
+        data: dataY,
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
@@ -142,7 +142,7 @@ $(function() {
       {
         name: "死因和经济负担",
         type: "bar",
-        data: data2,
+        data: dataX,
         label: {
           normal: {
             show: true,

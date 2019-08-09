@@ -1,10 +1,12 @@
 // 加载机构概况的图标
 $(function () {
-  var data = [2, 3, 4, 5, 8];
-  var data1 = [3, 5, 6, 2, 4];
-  var data2 = [4, 2, 3, 6, 5];
-  var data3 = [6, 4, 3, 2, 4];
-  var org_echart = echarts.init(document.getElementById('org_echart'));
+
+  let data = [2, 3, 4, 5, 8];
+  let data1 = [3, 5, 6, 2, 4];
+  let data2 = [4, 2, 3, 6, 5];
+  let data3 = [6, 4, 3, 2, 4];
+
+  let org_echart = echarts.init(document.getElementById('org_echart'));
   // 指定图表的配置项和数据
   optionGroup = {
       tooltip: {

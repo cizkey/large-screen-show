@@ -12,8 +12,8 @@
     <!--头部-->
     <div class="header">
         <div class="header_left">
-            <div class="left_hours left_text_gradient">09:35:26</div>
-            <div class="left_date left_text_gradient">2019-08-08 星期四</div>
+            <div id="time" class="left_hours left_text_gradient"></div>
+            <div id="day" class="left_date left_text_gradient"></div>
         </div>
         <div class="header_center ">
             <span class="center_text_gradient">白银市全民健康信息平台</span>
@@ -175,8 +175,13 @@
         </div>
     </div>
 
+    <!-- load lib start -->
     <script src="./lib/jquery/jquery-1.12.4.js"></script>
     <script src="./lib/echarts/echarts.min.js"></script>
+    <script src="./lib/moment//moment-with-locales.min.js"></script>
+    <!-- load lib end -->
+    
+    <script src="./js/main.js"></script>
 
     <!-- 机构概况 chart load -->
     <script src="./js/loadOrg.js"> </script>

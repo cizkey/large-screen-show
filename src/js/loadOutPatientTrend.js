@@ -1,6 +1,6 @@
 $(function () {
-  let data1 = ['白银市第一', '甘肃中心', '会宁县人民', '白银市中学', '白银市第一', '白银市第一',  '白银市第一'];
-  let data2 = [504, 340, 736, 61, 328, 49, 920, 407];
+  let dataY = ['白银市第一', '甘肃中心', '会宁县人民', '白银市中学', '白银市第一', '白银市第一',  '白银市第一'];
+  let dataX = [504, 340, 736, 61, 328, 49, 920, 407];
 
   let option = {
     tooltip: {
@@ -46,7 +46,7 @@ $(function () {
       {
         type: "category",
         boundaryGap: true,
-        data: data1,
+        data: dataY,
         axisLine: {
           lineStyle: {
             color: "#03B6F0"
@@ -58,7 +58,7 @@ $(function () {
       {
         name: "就诊人次",
         type: "bar",
-        data: data2,
+        data: dataX,
         label: {
           normal: {
             show: true,
