@@ -64,7 +64,16 @@ $(function() {
             show: true,
             position: "right"
           }
-        }
+        },
+        
+        // itemStyle: {
+        //   normal: {
+        //     color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+        //       { offset: 0, color: "#E1A40B" },
+        //       { offset: 1, color: "#947817" }
+        //     ])
+        //   }
+        // }
       }
     ]
   };
@@ -87,7 +96,7 @@ $(function() {
         }
       }
     },
-    color: ["#0FACD9"],
+    color: ["#04BDF6"],
     grid: {
       left: "3%",
       right: "4%",
@@ -139,7 +148,17 @@ $(function() {
             show: true,
             position: "right"
           }
-        }
+        },
+        
+        // 柱状列的渐变颜色效果
+        // itemStyle: {
+        //   normal: {
+        //     color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+        //       { offset: 0, color: "#04BDF6" },
+        //       { offset: 1, color: "#1687A9" }
+        //     ])
+        //   }
+        // }
       }
     ]
   };
