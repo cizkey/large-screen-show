@@ -140,16 +140,16 @@ var tasks = {
     },
     js: {
       fullPath: true,
-      // group: [
-      //   {
-      //     value: ["flexible.js"],
-      //     name: "flexible"
-      //   },
-      //   {
-      //     value: ["zepto.js", "app.js"],
-      //     name: "bundle"
-      //   }
-      // ]
+      group: [
+        // {
+        //   value: ["flexible.js"],
+        //   name: "flexible"
+        // },
+        // {
+        //   value: ["zepto.js", "app.js"],
+        //   name: "bundle"
+        // }
+      ]
     }
   },
   /**

@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>大屏展示</title>
-    <script src="./lib/jquery/jquery-1.12.4.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
     <link href="./css//index.css" rel="stylesheet">
     </link>
 </head>
@@ -72,13 +70,34 @@
                 </div>
             </div>
             <div class="other_div">
-                <div class="content_left_title"><span class="content_title">城市入口</span></div>
+                <div class="content_left_title"><span class="content_title">城市人口</span></div>
                 <div class="org_content">
+                    <div class="chart_dev" id="popluation"></div>
                 </div>
             </div>
             <div class="other_div">
                 <div class="content_left_title"><span class="content_title">医疗运营情况</span></div>
-                <div class="org_content">
+                <div class="org_content displye_flex">
+                    <div style="width: 40%;">
+                        <div class="label_div">
+                            <span>出院人次(万人次):</span>
+                            <br />
+                            <span class="label_span1">26.88</span>
+                        </div>
+                        <div class="label_div">
+                            <span>出院人次(%):</span>
+                            <br />
+                            <span class="label_span2">26.88</span>
+                        </div>
+                        <div class="label_div">
+                            <span>病床使用率(天):</span>
+                            <br />
+                            <span class="label_span3">26.88</span>
+                        </div>
+                    </div>
+                    <div style="width: 60%;">
+                        <div class="chart_dev" id="runChart"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +130,7 @@
             <div class="center_bottom">
                 <div class="center_bottom_btn"><span class="content_title">白银市平台入口 >></span></div>
                 <div class="map_echarts" id="map_echart">
-                    地图todo
+                    地图
                 </div>
             </div>
         </div>
@@ -119,27 +138,62 @@
         <div class="content_right">
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">医院数据上传趋势</span></div>
-                <div class="org_content">
+                <div class="org_content displye_flex">
+                    <div style="width: 40%;">
+                        <div class="chart_dev" id="dataUpload1"></div>
+                    </div>
+                    <div style="width: 60%;">
+                        <div class="chart_dev" id="dataUpload2"></div>
+                    </div>
                 </div>
             </div>
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">人口增长趋势</span></div>
                 <div class="org_content">
+                    <div class="chart_dev" id="popIncrease"></div>
                 </div>
             </div>
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">疾病排序</span></div>
-                <div class="org_content">
+                <div class="org_content displye_flex">
+                    <div style="width: 50%;height: 100%;">
+                        <span>疾病感染数量排序:</span>
+                        <div class="chart_dev" id="disease1"></div>
+                    </div>
+                    <div style="width: 50%;height: 100%;">
+                        <span>死因和经济负担排序:</span>
+                        <div class="chart_dev" id="disease2"></div>
+                    </div>
                 </div>
             </div>
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">近30天机构门诊人次排行</span></div>
                 <div class="org_content">
+                    <div class="chart_dev" id="patientTrend"></div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/echarts/echarts.min.js"></script>
+
+    <!-- 机构概况 chart load -->
     <script src="./js/loadOrg.js"> </script>
+    <!-- 城市人口 chart load -->
+    <script src="./js/loadPop.js"> </script>
+    <!-- 医疗运营情况 chart load -->
+    <script src="./js/loadRun.js"> </script>
+
+
+    <!-- 近30天机构门诊人次排行 chart load -->
+    <script src="./js/loadOutPatientTrend.js"> </script>
+    <!-- 人口增长 chart load -->
+    <script src="./js/loadPopIncrease.js"> </script>
+    <!-- 医院数据上传 chart load -->
+    <script src="./js/loadDataUpload.js"> </script>
+    <!-- 疾病排序 chart load -->
+    <script src="./js/loadDisease.js"> </script>
 </body>
 
 </html>
