@@ -51,7 +51,7 @@ $(function() {
               { name: "白银区", value: 15477.48 },
               { name: "会宁县", value: 31686.1 },
               { name: "景泰县", value: 6992.6 },
-              { name: "靖远县", value: 44045.49 }
+              { name: "靖远县", value: 39045.49 }
             ],
             // 自定义名称映射
             nameMap: {
