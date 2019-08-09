@@ -201,6 +201,8 @@ body {
   width: 100%;
   padding: 10px 40px;
 }
+
+/* add by liwen */
 .chart_dev {
   height: 100%;
 }
@@ -220,3 +222,4 @@ body {
 .label_span3 {
   font-size: 22px; color:#04B9F2
 }
+/* / add by liwen */
