@@ -13,8 +13,8 @@ $(function loadOrg() {
     color: ["#E549DB", "#22D41E", "#FCAB1C", "#F76041"],
     legend: {
       right: 0,
-      height: "40px",
-      orient: "vertical",
+    //   height: "40px",
+      orient: "horizontal",
       textStyle: {
         color: "#fff"
       },
@@ -36,7 +36,7 @@ $(function loadOrg() {
       containLabel: true
     },
     xAxis: {
-        name: '年',
+      name: "年",
       type: "category",
       axisLine: {
         lineStyle: {
