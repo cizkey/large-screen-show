@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>大屏展示</title>
-    <script src="./lib/jquery/jquery-1.12.4.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
     <link href="./css//index.css" rel="stylesheet">
     </link>
 </head>
@@ -140,13 +138,19 @@
         <div class="content_right">
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">医院数据上传趋势</span></div>
-                <div class="org_content">
+                <div class="org_content displye_flex">
+                    <div style="width: 40%;">
+                        <div class="chart_dev" id="dataUpload1"></div>
+                    </div>
+                    <div style="width: 60%;">
+                        <div class="chart_dev" id="dataUpload2"></div>
+                    </div>
                 </div>
             </div>
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">人口增长趋势</span></div>
                 <div class="org_content">
-                        <div class="chart_dev" id="popIncrease"></div>
+                    <div class="chart_dev" id="popIncrease"></div>
                 </div>
             </div>
             <div class="item_div">
@@ -162,6 +166,10 @@
             </div>
         </div>
     </div>
+
+    <script src="./lib/jquery/jquery-1.12.4.js"></script>
+    <script src="./lib/echarts/echarts.min.js"></script>
+
     <!-- 机构概况 chart load -->
     <script src="./js/loadOrg.js"> </script>
     <!-- 城市人口 chart load -->
@@ -174,5 +182,8 @@
     <script src="./js/loadOutPatientTrend.js"> </script>
     <!-- 人口增长 chart load -->
     <script src="./js/loadPopIncrease.js"> </script>
+    <!-- 医院数据上传 chart load -->
+    <script src="./js/loadDataUpload.js"> </script>
 </body>
+
 </html>
