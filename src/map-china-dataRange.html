@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="./data/china/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=4MXEM0machPymPDDp2Go5O9vIvqU6EuZ"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        function randomData() {
+            return Math.round(Math.random() * 1000);
+        }
+
+        option = {
+            title: {
+                text: '测试',
+                subtext: '纯属虚构',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['测试']
+            },
+            visualMap: {
+                min: 0,
+                max: 2500,
+                left: 'left',
+                top: 'bottom',
+                text: ['高', '低'],           // 文本，默认为数值文本
+                calculable: true
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    dataView: { readOnly: false },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            dataRange: {
+                x: '-1000px',//图例横轴位置
+                y: '-1000px',//图例纵轴位置
+                orient: 'horizontal',
+                min: 0,
+                max: 55000,
+                text: ['高', '低'],           // 文本，默认为数值文本
+                splitList: [
+                    { start: 1, end: 1, color: '#51c418' },
+                    { start: 2, end: 2, color: '#f5212d' },
+                    { start: 3, end: 3, color: '#fbad15' },
+                    { start: 4, end: 4, color: '#f5212d' },
+                    { start: 5, end: 5, color: '#51c418' },
+                    { start: 6, end: 6, color: '#fbad15' },
+                    { start: 7, end: 7, color: '#f5212d' },
+                ],
+                splitNumber: 0
+            },
+            series: [
+                {
+                    name: 'iphone3',
+                    type: 'map',
+                    mapType: 'china',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '西北地区', value: 1 },
+                        { name: '华北地区', value: 2 },
+                        { name: '华中地区', value: 3 },
+                        { name: '东北地区', value: 4 },
+                        { name: '华东地区', value: 5 },
+                        { name: '华南地区', value: 6 },
+                        { name: '西南地区', value: 7 }
+                    ]
+                }
+            ]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+</body>
+
+</html>
