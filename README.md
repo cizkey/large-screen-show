@@ -12,8 +12,6 @@ npm install
 ```bash
 npm run start
 ```
-### 效果
-![ebXhgH.png](https://s2.ax1x.com/2019/08/09/ebXhgH.png)
 
 ## 运行并使用
 
@@ -42,6 +40,16 @@ cnpm install  
 gulp
 ```
 然后打开浏览器，输入 http://localhost:8181 查看页面。
+
+### 效果
+
+**http://localhost:8181**:
+
+![ebXhgH.png](https://s2.ax1x.com/2019/08/09/ebXhgH.png)
+
+**http://localhost:8181/map-china-dataRange.html**:
+
+[![mPNvlV.md.png](https://s2.ax1x.com/2019/08/13/mPNvlV.md.png)](https://imgchr.com/i/mPNvlV)
 
 ## 布局的适应：视口单位(Viewport units)
 
