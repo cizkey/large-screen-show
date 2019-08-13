@@ -70,3 +70,6 @@ gulp
 ![Image text](https://images2017.cnblogs.com/blog/1210235/201709/1210235-20170918164116462-239899595.png)
 
 
+## 参考
+
+> * [广东省地图 show](https://github.com/carsonWuu/echartJs.git)
