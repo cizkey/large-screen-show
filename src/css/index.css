@@ -1,19 +1,23 @@
 /* 
  * 原静态文件备份
  */
-html{
+
+ html{
   height: 100%;
 }
 body {
   color: #fff;
   background: url("../../images/bg.png");
-  height: calc(100% - 27px);
+  height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 .header {
   display: flex;
   justify-content: space-between;
   background: url("../../images/top.png");
+  background-size: 100%;
+  height: 76px;
   background-repeat: no-repeat;
 }
 .header_left {
@@ -61,7 +65,7 @@ body {
 .content{
   display: flex;
   justify-content: space-between;
-  height: calc(100% - 100px);
+  height: calc(100% - 91px);
   padding: 0px 15px 15px;
 }
 .content_left{
@@ -90,15 +94,32 @@ body {
   padding: 10px 20px;
   font-weight: bolder;
 }
+.bigTitle{
+  color: #05eeff;
+  background-image: -webkit-linear-gradient(left, #007bff, #05eeff 5%,#05eeff 10%, #007bff 15%, #007bff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: 200%;
+  -webkit-animation: anim 2s infinite;
+  font-size: 18px;
+}
+@-webkit-keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
 .content_title{
   /*background: -webkit-linear-gradient(left,#00ddfe,#007efe 70%,#00ddfe 30%);*/
   background-image:-webkit-linear-gradient(left,#007bff,#05eeff,#00affe);
   -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
-
+  font-size: 16px;
 }
 .content_left .other_div{
-  height: 30%;
+  height: calc(30% - 20px);
   border: 1px solid #0a185c;
   margin-top: 15px;
   background: url("../../images/ld.png");
@@ -109,7 +130,7 @@ body {
   width: 28%;
 }
 .content_right .item_div{
-  height: calc(25% - 5px);
+  height: calc(25% - 15px);
   text-align: right;
   border: 1px solid #0a185c;
   margin-bottom: 15px;
@@ -168,11 +189,20 @@ body {
   color: #03B6F0;
 }
 .clin_count_item{
+  position: relative;
   display: flex;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+.clin_count_item:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+  content: "";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
 }
 .clin_count{
-  background: url(../../images/numb.png);
+  background: url("../../images/numb.png");
   background-repeat: no-repeat;
   width: 32px;
   background-position-x: center;
@@ -180,8 +210,87 @@ body {
   height: 38px;
   line-height: 35px;
   text-align: center;
-  background-size: 65px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+
 }
+.clin_count_1{
+  background: url("../../images/1.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_2{
+  background: url("../../images/2.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_3{
+  background: url("../../images/3.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_4{
+  background: url("../../images/4.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_5{
+  background: url("../../images/5.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_6{
+  background: url("../../images/6.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_7{
+  background: url("../../images/7.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_8{
+  background: url("../../images/8.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_9{
+  background: url("../../images/9.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+.clin_count_0{
+  background: url("../../images/0.png");
+  position: relative;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  animation:myfirst 1s;
+}
+@keyframes myfirst
+{
+
+  from {top:60px;}
+  to {top:0px;}
+}
+
 .center_bottom{
   display: flex;
   justify-content: center;
@@ -190,28 +299,64 @@ body {
   height: calc(100% - 60px);
 }
 .center_bottom_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   width: 200px;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: -webkit-center;
   border: 1px solid #03B6F0;
   font-weight: bolder;
 }
 .map_echarts{
-  height: calc(100% - 62px);
+  height: calc(100% - 122px);
   width: 100%;
-  padding: 10px 40px;
+  padding: 40px 40px;
+}
+.tableClass {
+  overflow: hidden;
+  height: calc(100% - 40px);
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.tableTh {
+  width: 100%;
+  display: flex;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #02B9FD;
+  font-size: 14px;
+  font-weight: bold;
+}
+.tableTh>div>{
+  width: 33%;
+}
+.tableTr {
+  width: 100%;
+  padding-bottom: 10px;
+  overflow: auto
+}
+.tableTd{
+  width: 33%;float: left;
+}
+.clinPatient_count{
+  color: #02B9FD;
 }
 
 /* add by liwen */
 .chart_dev {
-  height: 100%;
+  height: calc(100% - 10px);
+  padding-top: 10px;
 }
 .displye_flex {
   display: flex;
 }
 .label_div {
-  margin: 5px 0px;
+  margin: 10px 0px;
   padding: 0px 20px;
+  font-size: 14px;
 }
 .label_span1 {
   font-size: 22px; color:#FFAF10

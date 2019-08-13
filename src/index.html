@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>大屏展示</title>
-    <link href="./css//index.css" rel="stylesheet">
-    </link>
+    <link href="./css//index.css" rel="stylesheet"></link>
+    <link href="./css/globle.css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -106,31 +106,20 @@
             <div class="center_top">
                 <div>
                     <div class="clin_count_title">上年度累计门诊人数</div>
-                    <div class="clin_count_item">
-                        <div class="clin_count">1</div>
-                        <div class="clin_count">0</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
+                    <div class="clin_count_item" id="previousClin">
                     </div>
                 </div>
                 <div>
                     <div class="clin_count_title">本年度累计门诊人数</div>
-                    <div class="clin_count_item">
-                        <div class="clin_count">1</div>
-                        <div class="clin_count">0</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
-                        <div class="clin_count">2</div>
+                    <div class="clin_count_item" id="nextClin">
                     </div>
                 </div>
             </div>
             <div class="center_bottom">
-                <div class="center_bottom_btn"><span class="content_title">白银市平台入口 >></span></div>
+                <div class="center_bottom_btn">
+                    <h1 class="bigTitle">白银市平台入口 >></h1>
+                </div>
                 <div class="map_echarts" id="map_echart">
-                    
                 </div>
             </div>
         </div>
@@ -140,7 +129,8 @@
                 <div class="content_right_title"><span class="content_title">医院数据上传趋势</span></div>
                 <div class="org_content displye_flex">
                     <div style="width: 40%;">
-                        <div class="chart_dev" id="dataUpload1"></div>
+                        <div class="chart_dev" id="dataUpload1" style="height: calc(100% - 46px);"></div>
+                        <div style="  text-align: center;    font-size: 14px;">累计上传条数(万条)</div>
                     </div>
                     <div style="width: 60%;">
                         <div class="chart_dev" id="dataUpload2"></div>
@@ -157,11 +147,11 @@
                 <div class="content_right_title"><span class="content_title">疾病排序</span></div>
                 <div class="org_content displye_flex">
                     <div style="width: 50%;height: 100%;">
-                        <span>疾病感染数量排序:</span>
+                        <!--<span>疾病感染数量排序:</span>-->
                         <div class="chart_dev" id="disease1"></div>
                     </div>
                     <div style="width: 50%;height: 100%;">
-                        <span>死因和经济负担排序:</span>
+                        <!--<span>死因和经济负担排序:</span>-->
                         <div class="chart_dev" id="disease2"></div>
                     </div>
                 </div>
@@ -169,7 +159,20 @@
             <div class="item_div">
                 <div class="content_right_title"><span class="content_title">近30天机构门诊人次排行</span></div>
                 <div class="org_content">
-                    <div class="chart_dev" id="patientTrend"></div>
+                    <div class="chart_dev" id="patientTrend">
+
+                        <div class="tableTh">
+                            <div style="width: 33%">序号</div>
+                            <div style="width: 33%">医疗机构</div>
+                            <div style="width: 33%">门诊人次</div>
+                        </div>
+
+                        <div id=demo class="tableClass">
+                            <div id=demo1>
+                            </div>
+                            <div id=demo2></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,7 +206,41 @@
 
 
     <!-- 白银市地图显示 chart load -->
-    <script src="./js/loadBaiyinMap.js"> </script>
+    <!-- <script src="./js/loadBaiyinMap.js"> </script> -->
+    <script src="./js/loadMap.js"> </script>
+    <!-- <script src="./lib/echarts/echarts-gl.js"></script> -->
+
+    <!-- 数字累加 num load -->
+    <script src="./js/num.js"> </script>
+
+    <script type="text/javascript">
+        // var rondomNum = parseInt(Math.floor(Math.random()*(1 - 100) + 100));;
+        var numTotal = 104542;
+        var yearTotal = 266845;
+        $(document).ready(function () {
+            trace();
+            traceTotal();
+        });
+        function trace() {
+            $("#previousClin").rollNumDaq({
+                deVal: numTotal,
+            });
+        }
+        setInterval(() => {
+            trace();
+            numTotal += 165;
+        }, 20000);
+
+        function traceTotal() {
+            $("#nextClin").rollNum({
+                deVal: yearTotal
+            });
+        }
+        setInterval(() => {
+            traceTotal();
+            yearTotal += 165;
+        }, 25000);
+    </script>
 </body>
 
 </html>
