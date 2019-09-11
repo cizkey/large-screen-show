@@ -332,7 +332,7 @@ $(function() {
             ]
           },
           {
-            name: "白银市第一人民医院平台",
+            name: "湖南第一人民医院平台",
             type: "scatter",
             coordinateSystem: "geo",
             symbol: "pin",
@@ -350,7 +350,7 @@ $(function() {
                 fontWeight: 200,
                 borderWidth: 1,
                 borderRadius: 4,
-                formatter: ["{a|白银市第一人民医院平台}"].join("\n"),
+                formatter: ["{a|第一人民医院平台}"].join("\n"),
                 rich: {
                   a: {
                     align: "center",
@@ -372,7 +372,7 @@ $(function() {
                 fontWeight: 200,
                 borderWidth: 1,
                 borderRadius: 4,
-                formatter: ["{a|白银市第一人民医院平台}"].join("\n"),
+                formatter: ["{a|第一人民医院平台}"].join("\n"),
                 rich: {
                   a: {
                     align: "center",
@@ -398,7 +398,7 @@ $(function() {
             },
             data: [
               {
-                name: "白银市第一人民医院",
+                name: "第一人民医院",
                 value: [104.180903, 36.557772]
               }
             ]
